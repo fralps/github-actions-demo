@@ -7,10 +7,11 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Bash
-        run: echo "Hello World!"
-      - name: Ruby
+      - name: Install ruby
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
+      - name: Print in Bash
+        run: echo "Hello World!"
+      - name: Print in Ruby
         run: ruby hello.rb
