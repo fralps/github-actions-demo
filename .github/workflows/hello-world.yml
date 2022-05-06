@@ -5,25 +5,5 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-      - name: Setup ruby 💎
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '2.6'
-      - name: Setup Python 🐍
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: Setup Node 🪢
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
       - name: Print in Bash
         run: echo "Hello World!"
-      - name: Print in Ruby
-        run: ruby ./scripts/hello-world/hello.rb
-      - name: Print in Python
-        run: python3 ./scripts/hello-world/hello.py
-      - name: Print in Javascript
-        run: node ./scripts/hello-world/hello.js
