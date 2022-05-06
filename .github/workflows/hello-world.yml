@@ -7,11 +7,17 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Install ruby
+      - name: Setup ruby 💎
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
       - name: Print in Bash
         run: echo "Hello World!"
       - name: Print in Ruby
         run: ruby ./scripts/hello-world/hello.rb
+      - name: Print in Python
+        run: python3 ./scripts/hello-world/hello.py
