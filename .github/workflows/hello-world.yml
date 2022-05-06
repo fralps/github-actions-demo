@@ -5,10 +5,11 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
       - name: Bash
         run: echo "Hello World!"
       - name: Ruby
-        uses: actions/checkout@v2
         uses: actions/setup-ruby@v1
         with:
           ruby-version: '2.6'
