@@ -32,6 +32,4 @@ jobs:
       - name: Print in Javascript
         run: node ./scripts/hello-world/hello.js
       - name: Print in Php
-        run: |
-          ls -al
-          php ./scripts/hello-world/hello.php
+        run: php ./scripts/hello-world/hello.php

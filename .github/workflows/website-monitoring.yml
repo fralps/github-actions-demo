@@ -1,17 +1,10 @@
 name: website-monitoring
 
-on:
-  push:
-    branches:
-      - 'main'
-  schedule:
-    - cron: '0 2 * * *'
+on: push
 
 jobs:
   monitoring:
     runs-on: ubuntu-latest
     steps:
       - name: Checking websites status
-        run: |
-          ls -al
-        shell: bash
+        run: sh ./scripts/monitoring/alive.sh
