@@ -13,6 +13,5 @@ jobs:
     steps:
       - name: Checking websites status
         run: |
-          chmod +x ./scripts/monitoring/alive.sh
-          ./scripts/monitoring/alive.sh
+          ls
         shell: bash
