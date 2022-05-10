@@ -12,6 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checking websites status
-        run: |
-          ./scripts/monitoring/alive.sh
-        shell: bash
+        run: sh ./scripts/monitoring/alive.sh
